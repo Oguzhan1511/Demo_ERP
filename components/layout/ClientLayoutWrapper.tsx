@@ -49,8 +49,8 @@ export function ClientLayoutWrapper({
           {/* Mobile Top Bar */}
           <div className="lg:hidden bg-gray-950 text-white px-4 py-3 flex items-center justify-between sticky top-0 z-30">
             <div className="flex items-center gap-2">
-              <img src="/ogz-logo.png" alt="OGZ Logo" className="h-7 w-7 object-contain rounded-md" />
-              <span className="font-bold text-lg tracking-tight">OGZ</span>
+              <img src="/ogz-logo.svg" alt="OGZ Logo" className="h-6 w-auto object-contain" />
+              <span className="text-teal-400 text-[10px] font-bold tracking-widest uppercase mt-1">DEMO</span>
             </div>
             <button 
               onClick={() => setIsMobileMenuOpen(true)}

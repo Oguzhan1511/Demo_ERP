@@ -138,18 +138,13 @@ export function Sidebar({
         <div className={`sidebar-logo relative ${isCollapsed ? 'justify-center px-2' : 'justify-center px-4'}`}>
           <div className="flex items-center justify-center w-full">
             {isCollapsed ? (
-              <div className="flex items-center justify-center w-9 h-9 rounded-lg overflow-hidden flex-shrink-0">
-                <img src="/ogz-logo.png" alt="OGZ Logo" className="w-full h-full object-cover" />
+              <div className="flex items-center justify-center w-full h-10 px-2 flex-shrink-0">
+                <img src="/ogz-logo.svg" alt="OGZ Logo" className="w-full h-full object-contain" />
               </div>
             ) : (
-              <Link href="/" className="flex items-center gap-2 py-1">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                  <img src="/ogz-logo.png" alt="OGZ Logo" className="w-full h-full object-cover" />
-                </div>
-                <div className="flex flex-col leading-tight ml-1">
-                  <span className="text-white font-bold text-lg tracking-tight">OGZ</span>
-                  <span className="text-teal-400 text-[11px] font-semibold tracking-widest uppercase mt-0.5">Demo</span>
-                </div>
+              <Link href="/" className="flex items-center w-full py-1">
+                <img src="/ogz-logo.svg" alt="OGZ Logo" className="h-8 w-auto object-contain" />
+                <span className="text-teal-400 text-[10px] font-bold tracking-widest uppercase ml-2 mt-1">DEMO</span>
               </Link>
             )}
           </div>
