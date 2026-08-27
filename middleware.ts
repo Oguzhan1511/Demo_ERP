@@ -22,8 +22,8 @@ export async function middleware(request: NextRequest) {
   if (rawToken) {
     try {
       // Direct API verification to bypass all encryption/decryption issues
-      // Use ogzsystem.com (no www) to avoid cross-domain/ssl issues
-      const res = await fetch("https://ogzsystem.com/api/auth/session", {
+      // Use www.ogzsystem.com because ogzsystem.com redirects to www with 308 which drops the cookie
+      const res = await fetch("https://www.ogzsystem.com/api/auth/session", {
         headers: {
           cookie: `${cookieName}=${rawToken}`,
         },
@@ -39,7 +39,7 @@ export async function middleware(request: NextRequest) {
   }
 
   if (!isAuthenticated) {
-    const loginUrl = new URL("https://ogzsystem.com/admin/login");
+    const loginUrl = new URL("https://www.ogzsystem.com/admin/login");
     
     // Yönlendirilecek asıl sayfanın URL'sini dinamik olarak belirle
     const protocol = request.headers.get("x-forwarded-proto") || "https";
