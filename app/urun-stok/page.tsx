@@ -3,7 +3,7 @@ import { UrunStokClient } from "@/components/urun-stok/UrunStokClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ürün Stok Takibi — ALD Plastik",
+  title: "Ürün Stok Takibi — OGZ Demo",
   description: "Ürün bazlı stok durumu, çıkış ve giriş kayıtları.",
 };
 

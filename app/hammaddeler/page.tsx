@@ -3,7 +3,7 @@ import { HammaddeClient } from "@/components/hammadde/HammaddeClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hammaddeler — ALD Plastik",
+  title: "Hammaddeler — OGZ Demo",
   description: "Hammadde stok takibi, giriş-çıkış işlemleri ve kritik seviye yönetimi.",
 };
 

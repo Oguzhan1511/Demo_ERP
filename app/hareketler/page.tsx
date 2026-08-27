@@ -6,7 +6,7 @@ import { HareketiClient } from "@/components/hareketler/HareketiClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hareket Geçmişi — ALD Plastik",
+  title: "Hareket Geçmişi — OGZ Demo",
   description: "Tüm stok giriş-çıkış hareketlerinin tarih sıralı, filtrelenebilir dökümü.",
 };
 

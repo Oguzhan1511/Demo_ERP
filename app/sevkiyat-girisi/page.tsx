@@ -5,7 +5,7 @@ import { SevkiyatGirisiClient } from "@/components/sevkiyat/SevkiyatGirisiClient
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sevkiyat Girişi — ALD Plastik",
+  title: "Sevkiyat Girişi — OGZ Demo",
   description: "Dışarıdan gelen iadeler ve mamül girişleri.",
 };
 

@@ -4,7 +4,7 @@ import { UretimClient } from "@/components/uretim/UretimClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Üretim Girişi — ALD Plastik",
+  title: "Üretim Girişi — OGZ Demo",
   description: "Üretim kaydı girin, stok otomatik düşülür.",
 };
 

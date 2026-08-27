@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description:
     "Hammadde, reçete ve üretim bazlı stok takip sistemi. Plastik enjeksiyon ve imalat sektörü için tasarlanmış ERP çözümü.",
   icons: {
-    icon: "/ald-logo-square.png",
-    apple: "/ald-logo-square.png",
+    icon: "/ogz-logo.png",
+    apple: "/ogz-logo.png",
   },
 };
 

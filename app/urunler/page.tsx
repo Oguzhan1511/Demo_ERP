@@ -4,7 +4,7 @@ import { UrunClient } from "@/components/urun/UrunClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ürünler & Reçeteler — ALD Plastik",
+  title: "Ürünler & Reçeteler — OGZ Demo",
   description: "Ürün tanımlama ve reçete (BOM) yönetimi.",
 };
 

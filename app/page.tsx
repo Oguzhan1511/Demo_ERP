@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dashboard — ALD Plastik Stok Takip",
+  title: "Dashboard — OGZ Demo Stok Takip",
   description: "Hammadde ve üretim stok takip sistemine genel bakış.",
 };
 
