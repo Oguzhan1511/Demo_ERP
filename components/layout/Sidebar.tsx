@@ -144,7 +144,7 @@ export function Sidebar({
             ) : (
               <Link href="/" className="flex items-center w-full py-1">
                 <img src="/ogz-logo.svg" alt="OGZ Logo" className="h-8 w-auto object-contain" />
-                <span className="text-teal-400 text-[10px] font-bold tracking-widest uppercase ml-2 mt-1">DEMO</span>
+                <span className="text-teal-400 text-[10px] font-bold tracking-widest uppercase ml-1 mt-1">DEMO</span>
               </Link>
             )}
           </div>
