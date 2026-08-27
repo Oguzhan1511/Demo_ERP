@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ALD Plastik — Stok Takip Sistemi",
+  title: "FlexERP — Üretim ve Stok Yönetim Sistemi",
   description:
-    "Hammadde ve reçete bazlı stok takip sistemi. Plastik enjeksiyon üretimi için otomatik stok düşümü.",
+    "Hammadde, reçete ve üretim bazlı stok takip sistemi. Plastik enjeksiyon ve imalat sektörü için tasarlanmış ERP çözümü.",
   icons: {
     icon: "/ald-logo-square.png",
     apple: "/ald-logo-square.png",

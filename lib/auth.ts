@@ -14,8 +14,8 @@ export const authOptions: AuthOptions = {
           return null;
         }
 
-        const adminUsername = process.env.ADMIN_USERNAME || "admin";
-        const adminPassword = process.env.ADMIN_PASSWORD || "ald2024";
+        const adminUsername = process.env.ADMIN_USERNAME || "demo";
+        const adminPassword = process.env.ADMIN_PASSWORD || "demo2024";
 
         const isValid =
           credentials.username === adminUsername &&
@@ -25,7 +25,7 @@ export const authOptions: AuthOptions = {
           return {
             id: "1",
             name: adminUsername,
-            email: `${adminUsername}@aldplastik.local`,
+            email: `${adminUsername}@flexerp.demo`,
           };
         }
 
@@ -55,9 +55,7 @@ export const authOptions: AuthOptions = {
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      if (url.startsWith("https://ogzsystem.com") || url.startsWith("https://www.ogzsystem.com")) {
-        return url;
-      }
+      // Demo: sadece kendi base URL'imiz içinde kal
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       try {
         if (new URL(url).origin === baseUrl) return url;
@@ -82,5 +80,6 @@ export const authOptions: AuthOptions = {
       return session;
     },
   },
-  secret: "ogzsystem-ald-plastik-shared-secret-2026-v2",
+  // Demo sürümü için ayrı secret — ALD Plastik ile KARIŞMAZ
+  secret: "flexerp-demo-separate-secret-2026-not-ald-plastik",
 };
