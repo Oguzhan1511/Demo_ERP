@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FlexERP — Üretim ve Stok Yönetim Sistemi",
+  title: "OGZ Demo — Üretim ve Stok Yönetim Sistemi",
   description:
     "Hammadde, reçete ve üretim bazlı stok takip sistemi. Plastik enjeksiyon ve imalat sektörü için tasarlanmış ERP çözümü.",
   icons: {

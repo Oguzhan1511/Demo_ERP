@@ -139,16 +139,16 @@ export function Sidebar({
           <div className="flex items-center justify-center w-full">
             {isCollapsed ? (
               <div className="flex items-center justify-center w-9 h-9 rounded-lg overflow-hidden flex-shrink-0">
-                <img src="/flexerp-logo.png" alt="FlexERP Logo" className="w-full h-full object-cover" />
+                <img src="/ogz-logo.png" alt="OGZ Logo" className="w-full h-full object-cover" />
               </div>
             ) : (
               <Link href="/" className="flex items-center gap-2 py-1">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg overflow-hidden flex-shrink-0">
-                  <img src="/flexerp-logo.png" alt="FlexERP Logo" className="w-full h-full object-cover" />
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                  <img src="/ogz-logo.png" alt="OGZ Logo" className="w-full h-full object-cover" />
                 </div>
-                <div className="flex flex-col leading-tight">
-                  <span className="text-white font-bold text-base tracking-tight">FlexERP</span>
-                  <span className="text-teal-300 text-[10px] font-medium tracking-widest uppercase">Demo</span>
+                <div className="flex flex-col leading-tight ml-1">
+                  <span className="text-white font-bold text-lg tracking-tight">OGZ</span>
+                  <span className="text-teal-400 text-[11px] font-semibold tracking-widest uppercase mt-0.5">Demo</span>
                 </div>
               </Link>
             )}
