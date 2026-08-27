@@ -21,9 +21,12 @@ export async function middleware(request: NextRequest) {
 
   if (rawToken) {
     try {
-      // Direct API verification to bypass all encryption/decryption issues
-      // Use www.ogzsystem.com because ogzsystem.com redirects to www with 308 which drops the cookie
-      const res = await fetch("https://www.ogzsystem.com/api/auth/session", {
+      // Kendi API'mize soralım, çünkü artık secret'lar ortak ve cross-domain hatalarından kaçınmış oluruz.
+      const protocol = request.headers.get("x-forwarded-proto") || "https";
+      const host = request.headers.get("host") || "demo.ogzsystem.com";
+      const localUrl = `${protocol}://${host}/api/auth/session`;
+
+      const res = await fetch(localUrl, {
         headers: {
           cookie: `${cookieName}=${rawToken}`,
         },

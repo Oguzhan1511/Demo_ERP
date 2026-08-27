@@ -16,7 +16,7 @@ export async function getSharedSession() {
 
   // 1) Önce yerel JWT doğrula (demo local login için)
   try {
-    const secret = process.env.NEXTAUTH_SECRET || "flexerp-demo-secret-key-2026-separate-from-ald";
+    const secret = process.env.NEXTAUTH_SECRET || "ogzsystem-ald-plastik-shared-secret-2026-v2";
     // next-auth getToken mock: header üzerinden değil, cookie değerini decode ederiz
     // Burada basit bir fetch ile kendi /api/auth/session'ımıza sorarız
     const localRes = await fetch(`${process.env.NEXTAUTH_URL || "http://localhost:3002"}/api/auth/session`, {

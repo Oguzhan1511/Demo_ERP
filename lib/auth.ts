@@ -80,6 +80,6 @@ export const authOptions: AuthOptions = {
       return session;
     },
   },
-  // Demo sürümü için ayrı secret — ALD Plastik ile KARIŞMAZ
-  secret: "flexerp-demo-separate-secret-2026-not-ald-plastik",
+  // Ana portal ile (OgzSystem) SSO yapabilmesi için aynı secret'i kullanıyoruz.
+  secret: "ogzsystem-ald-plastik-shared-secret-2026-v2",
 };
