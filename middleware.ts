@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // API auth rotaları ile usta formları hariç her şeyi koru
@@ -22,7 +22,8 @@ export async function proxy(request: NextRequest) {
   if (rawToken) {
     try {
       // Direct API verification to bypass all encryption/decryption issues
-      const res = await fetch("https://www.ogzsystem.com/api/auth/session", {
+      // Use ogzsystem.com (no www) to avoid cross-domain/ssl issues
+      const res = await fetch("https://ogzsystem.com/api/auth/session", {
         headers: {
           cookie: `${cookieName}=${rawToken}`,
         },
@@ -39,7 +40,12 @@ export async function proxy(request: NextRequest) {
 
   if (!isAuthenticated) {
     const loginUrl = new URL("https://ogzsystem.com/admin/login");
-    loginUrl.searchParams.set("callbackUrl", `https://ald.ogzsystem.com${pathname}`);
+    
+    // Yönlendirilecek asıl sayfanın URL'sini dinamik olarak belirle
+    const protocol = request.headers.get("x-forwarded-proto") || "https";
+    const host = request.headers.get("host") || "demo.ogzsystem.com";
+    
+    loginUrl.searchParams.set("callbackUrl", `${protocol}://${host}${pathname}`);
     return NextResponse.redirect(loginUrl);
   }
 
